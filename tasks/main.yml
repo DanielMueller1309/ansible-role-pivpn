@@ -1,0 +1,21 @@
+---
+  - name: "Download PiVPN installer"
+    get_url:
+      url: https://install.pivpn.ioi
+      dest: ~/install-pivpn.sh
+      mode: 0740
+
+  - name: Set unattended conf for pivpn
+    become: True
+    template:
+      src: "unattended_wireguard.conf.j2"
+      dest: "~/unattended_wireguard.conf"
+      owner: root
+      group: root
+      mode: 0644
+    register: unattendedconf
+
+  - name: Install PiVPN
+    shell: "~/install-pivpn.sh --unattended "
+    when: unattendedconf.changed
+

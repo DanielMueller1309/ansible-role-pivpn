@@ -1,0 +1,14 @@
+---
+  pivpn_ipv4dev: 'eht0'
+  pivpn_install_user: 'user'
+  pivpn_vpn: 'wireguard'
+  pivpn_net: '10.6.0.0'
+  pivpn_subnetclass: 24
+  pivpn_allowed_ips: '0.0.0.0/0, ::0/0'
+  pivpn_mtu: 1420
+  pivpn_port: 51820
+  pivpn_dns1: '192.168.178.11'
+  pivpn_dns2: '192.168.178.1'
+  pivpn_host: 'pivpn'
+  pivpn_pesistentkeepalive: 25
+  pivpn_unattupg: 1
