@@ -2,7 +2,7 @@
   pivpn_ipv4dev: 'eht0'
   pivpn_install_user: 'user'
   pivpn_vpn: 'wireguard'
-  pivpn_net: '10.6.0.0'
+  pivpn_net: '10.7.0.0'
   pivpn_subnetclass: 24
   pivpn_allowed_ips: '0.0.0.0/0, ::0/0'
   pivpn_mtu: 1420

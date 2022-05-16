@@ -1,7 +1,7 @@
 ---
   - name: "Download PiVPN installer"
     get_url:
-      url: https://install.pivpn.ioi
+      url: https://install.pivpn.io
       dest: ~/install-pivpn.sh
       mode: 0740
 
@@ -19,3 +19,10 @@
     shell: "~/install-pivpn.sh --unattended "
     when: unattendedconf.changed
 
+  - name: add templates
+    ansible.builtin.template:
+      src: /mytemplates/foo.j2
+      dest: /etc/file.conf
+      owner: bin
+      group: wheel
+      mode: '0644'
